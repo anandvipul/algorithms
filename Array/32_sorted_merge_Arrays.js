@@ -15,6 +15,9 @@ function mergeArrays(arr1, arr2) {
     } else if (arr1[leftArrayIndex] > arr2[rightArrayIndex]) {
       resultArray.push(arr2[rightArrayIndex]);
       rightArrayIndex++;
+    } else {
+      resultArray.push(arr1[leftArrayIndex]);
+      leftArrayIndex++;
     }
   }
 
@@ -31,4 +34,4 @@ function mergeArrays(arr1, arr2) {
   return resultArray;
 }
 
-console.log(mergeArrays([1, 3, 5, 7], [2, 4, 6]));
+console.log(mergeArrays([1, 3, 5, 7], [4, 6, 7, 9]));
